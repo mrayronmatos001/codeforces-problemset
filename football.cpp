@@ -11,26 +11,23 @@ int main()
 {
     fast_io();
 
-    string n;
+    string s;
     int c=0;
-    cin >> n;
-    
-    for (char digite : n) {
-        if (digite == '4' || digite == '7') {
+    cin >> s;
+
+    for (int i=0; i<s.length(); i++) {
+        if (s[i]==s[i+1]) {
             c++;
+        } else {
+            c=0;
         }
-        if (c>7) {
-            cout << "NO";
+        if (c==6) {
+            cout << "YES" << endl;
             return 0;
         }
+            
     }
 
-    if (c==4 || c==7) {
-        cout << "YES";
-    } else {
-        cout << "NO";
-    }
-
+    cout << "NO" << endl;
     return 0;
-
 }
