@@ -82,7 +82,7 @@ int main() {
             if (dist.find(next_state) == dist.end()) {
                 dist[next_state] = dist[current] + 1;
                 q.push(next_state);
-            }
+            }   
         }
     }
     
